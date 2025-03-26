@@ -20,9 +20,9 @@ public class ParkingSpot implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-    @Column(nullable = false, unique = true, length = 10)
+    @Column(nullable = false, unique = true, length = 30)
     private String parkingSpotNumber;
-    @Column(nullable = false, unique = true, length = 7)
+    @Column(nullable = false, unique = true, length = 30)
     private String licensePlateCar;
     @Column(nullable = false,length = 70)
     private String brandCar;
@@ -35,10 +35,9 @@ public class ParkingSpot implements Serializable {
     @Column(nullable = false,length = 130)
     private String responsibleName;
     @Column(nullable = false,length = 30)
-    private String apartament;
+    private String apartment;
     @Column(nullable = false,length = 30)
     private String block;
-    
     public UUID getId() {
         return id;
     }
@@ -87,11 +86,11 @@ public class ParkingSpot implements Serializable {
     public void setResponsibleName(String responsibleName) {
         this.responsibleName = responsibleName;
     }
-    public String getApartament() {
-        return apartament;
+    public String getApartment() {
+        return apartment;
     }
-    public void setApartament(String apartament) {
-        this.apartament = apartament;
+    public void setApartment(String apartment) {
+        this.apartment = apartment;
     }
     public String getBlock() {
         return block;
@@ -99,6 +98,8 @@ public class ParkingSpot implements Serializable {
     public void setBlock(String block) {
         this.block = block;
     }
+    
+   
 
 
     
