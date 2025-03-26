@@ -36,7 +36,7 @@ public class ParkingSpot implements Serializable {
     private String responsibleName;
     @Column(nullable = false,length = 30)
     private String apartment;
-    @Column(nullable = false,length = 30)
+    @Column(nullable = true,length = 30)
     private String block;
     public UUID getId() {
         return id;
@@ -98,10 +98,5 @@ public class ParkingSpot implements Serializable {
     public void setBlock(String block) {
         this.block = block;
     }
-    
-   
-
-
-    
     
 }
